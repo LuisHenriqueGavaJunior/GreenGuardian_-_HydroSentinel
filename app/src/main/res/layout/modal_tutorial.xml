@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Tutorial_texto"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:layout_below="@+id/Tutorial_titulo"
+        android:layout_marginTop="33dp"
+        android:text="Para utilizar o sistema, primeiro ative o Bluetooth clicando no botão correspondente (certifique-se de que seu dispositivo esteja com o bluetooth ligado)."
+        android:textAlignment="center"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/Tutorial_texto2"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@+id/Tutorial_texto"
+        android:layout_marginTop="32dp"
+        android:text="Para irrigar a planta, clique no botão &quot;Irrigar planta&quot;. Isso irá ativar a bomba d'água e o vaso será regado."
+        android:textAlignment="center"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/Tutorial_texto3"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:layout_below="@+id/Tutorial_texto2"
+        android:layout_marginTop="32dp"
+        android:text="Para ativar a irrigação automática da planta, onde ela será irrigada sempre que o nível de umidade estiver baixo, clique no botão &quot;Ligar&quot;. Para desligar, basta clicar no botão &quot;Desligar&quot;."
+        android:textAlignment="center"
+        android:textSize="17sp" />
+
+    <TextView
+        android:id="@+id/Tutorial_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tutorial"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+</RelativeLayout>
