@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Dica_automatico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clique para ativar a irrigação automática"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951" />
+
+    <TextView
+        android:id="@+id/Dica_irrigar"
+        android:layout_width="173dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="76dp"
+        android:text="Clique para irrigar a planta"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/butao_ligar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butao_ligar"
+        android:layout_width="228dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="4dp"
+        android:text="Ligar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/Dica_automatico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/butao_irrigar"
+        android:layout_width="173dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="4dp"
+        android:text="Irrigar planta"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toTopOf="@+id/Dica_irrigar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dica_umidade"
+        android:layout_width="122dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="220dp"
+        android:text="Nível de umidade no vaso da planta"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/butao_irrigar"
+        app:layout_constraintEnd_toStartOf="@+id/dica_agua"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <TextView
+        android:id="@+id/dica_agua"
+        android:layout_width="122dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="36dp"
+        android:text="Nível de água no reservatório"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/butao_irrigar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dica_umidade"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="173dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="8dp"
+        android:text="GreenGuardian"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/butao_irrigar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/icon_agua"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="73dp"
+        app:layout_constraintBottom_toTopOf="@+id/porcento_agua"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/baseline_water_drop_24" />
+
+    <ImageView
+        android:id="@+id/icon_arvore"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginEnd="159dp"
+        app:layout_constraintBottom_toTopOf="@+id/porcento_umidade"
+        app:layout_constraintEnd_toStartOf="@+id/icon_agua"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/baseline_forest_24" />
+
+    <TextView
+        android:id="@+id/porcento_umidade"
+        android:layout_width="99dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="113dp"
+        android:text="0%"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/dica_umidade"
+        app:layout_constraintEnd_toStartOf="@+id/porcento_agua"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/porcento_agua"
+        android:layout_width="99dp"
+        android:layout_height="73dp"
+        android:layout_marginEnd="50dp"
+        android:text="0%"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/dica_agua"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/butao_bluetooth"
+        android:layout_width="64dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="B"
+        app:layout_constraintStart_toEndOf="@+id/titulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="64dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="14dp"
+        android:text="T"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/butao_bluetooth"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
